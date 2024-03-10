@@ -1,0 +1,25 @@
+﻿<Window x:Class="testgen.SecondWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:secondaryNamespace="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:testgen"
+        mc:Ignorable="d"
+        Title="" Height="450" Width="800" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="62.006"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button x:Name="exit" Content="Выйти" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click"/>
+        <Button x:Name="redact" Grid.Column="1" Content="Редактировать тест" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click_1" IsEnabled="True"/>
+        <Button x:Name="go" Grid.Column="2" Content="Пройти тест" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click_2"/>
+        <Frame x:Name="PageFrame" Grid.ColumnSpan="3" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
