@@ -20,7 +20,7 @@ namespace testgen
         SecondWindow secwin = new SecondWindow();
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (password.Text == "")
+            if (password.Text == "пароль")
             {
                 secwin.redact.IsEnabled = true;
                 secwin.Show();

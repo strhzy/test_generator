@@ -32,3 +32,4 @@ C:\Users\Alex\source\repos\testgen\testgen\obj\Debug\net8.0-windows\EmptyPage.g.
 C:\Users\Alex\source\repos\testgen\testgen\obj\Debug\net8.0-windows\TestPage.g.cs
 C:\Users\Alex\source\repos\testgen\testgen\obj\Debug\net8.0-windows\EmptyPage.baml
 C:\Users\Alex\source\repos\testgen\testgen\obj\Debug\net8.0-windows\TestPage.baml
+C:\Users\Alex\source\repos\testgen\testgen\obj\Debug\net8.0-windows\testgen.sourcelink.json

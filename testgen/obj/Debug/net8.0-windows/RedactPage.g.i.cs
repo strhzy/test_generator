@@ -69,7 +69,7 @@ namespace testgen {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/testgen;component/redactpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/testgen;V1.0.0.0;component/redactpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\RedactPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

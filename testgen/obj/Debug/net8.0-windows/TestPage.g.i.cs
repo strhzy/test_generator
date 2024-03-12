@@ -93,7 +93,7 @@ namespace testgen {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/testgen;component/testpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/testgen;V1.0.0.0;component/testpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\TestPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
