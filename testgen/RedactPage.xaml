@@ -15,7 +15,7 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <TextBlock Text="Добавьте в таблицу вопрос и 3 варианта ответа" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" />
-        <DataGrid x:Name="questGrid" ItemsSource="{Binding questions}" Grid.Row="1" AutoGenerateColumns="True" ColumnWidth="*" CellEditEnding="questGrid_CellEditEnding">
+        <DataGrid x:Name="questGrid" ItemsSource="{Binding questions}" Grid.Row="1" AutoGenerateColumns="True" ColumnWidth="*" CellEditEnding="questGrid_CellEdit" BeginningEdit="questGrid_CellEdit">
         </DataGrid>
         <Button x:Name="addButton" Content="Добавить вопрос" Grid.Row="2" Click="addButton_Click"/>
     </Grid>

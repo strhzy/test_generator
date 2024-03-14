@@ -1,41 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.DirectoryServices.ActiveDirectory;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace testgen
 {
     public partial class RedactPage : Page
     {
-        ObservableCollection<Question> questions = new ObservableCollection<Question>();
+        List<Question> questions = new List<Question>();
         public RedactPage()
         {
             InitializeComponent();
-            questions = Json.Deserialize<ObservableCollection<Question>>();
+            questions = Json.Deserialize<List<Question>>() ?? new List<Question>();
             questGrid.ItemsSource = questions;
         }
         private void addButton_Click(object sender, RoutedEventArgs e)
         {
             questGrid.ItemsSource = null;
-            Question quest = new Question("","","","","",Question.right_answer.Первый);
-            questions.Add(quest);
+            Question question = new Question(" "," "," "," "," ",Question.right_answer.Первый);
+            questions.Add(question);
             questGrid.ItemsSource = questions;
             Json.Serialize(questions);
         }
 
-        private void questGrid_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+        private void questGrid_CellEdit(object sender, DataGridCellEditEndingEventArgs e)
+        {
+            Json.Serialize(questions);
+        }
+
+        private void questGrid_CellEdit(object sender, DataGridBeginningEditEventArgs e)
         {
             Json.Serialize(questions);
         }
